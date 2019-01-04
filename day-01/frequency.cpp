@@ -1,21 +1,30 @@
 #include <fstream>
 #include <iostream>
+#include <set>
 #include <string>
 
 using namespace std;
 
 int main() {
-  ifstream infile("input");
+  int frequency = 0;
+  set<int> seen;
+  set<int>::iterator it;
 
-  int frequency;
+  while (1) {
+    ifstream infile("input");
+    string line;
+    while (getline(infile, line)) {
+      int value = stoi(line);
+      frequency += value;
 
-  string line;
-  while (getline(infile, line)) {
-    int value = stoi(line);
-    frequency += value;
+      it = seen.find(frequency);
+      if (it != seen.end()) {
+        cout << "Found duplicated frequency: " << frequency << endl;
+        return 0;
+      }
+
+      seen.insert(frequency);
+    }
   }
-
-  cout << "Result frequency: " << frequency << endl;
-
   return 0;
 }
