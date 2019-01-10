@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "string": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "utility": "cpp"
     },
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "C_Cpp.default.cppStandard": "c++17"
