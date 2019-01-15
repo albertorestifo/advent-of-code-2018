@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-  ifstream infile("input");
+  ifstream infile("puzzle.in");
   string line;
 
   unordered_map<char, int> linesum;

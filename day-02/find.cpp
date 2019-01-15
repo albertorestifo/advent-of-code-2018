@@ -27,7 +27,7 @@ void diff_strings(string a, string b, int* diff) {
 }
 
 int main() {
-  ifstream infile("input");
+  ifstream infile("puzzle.in");
   string line;
 
   // Load all the ids in memory

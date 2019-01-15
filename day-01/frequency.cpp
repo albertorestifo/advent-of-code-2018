@@ -11,7 +11,7 @@ int main() {
   set<int>::iterator it;
 
   while (1) {
-    ifstream infile("input");
+    ifstream infile("puzzle.in");
     string line;
     while (getline(infile, line)) {
       int value = stoi(line);
